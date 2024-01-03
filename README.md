@@ -15,3 +15,5 @@
 | id | BIGINT | N | 기본키 | 일련번호, 기본키 |
 | title | VARCHAR(255) | N |  | 게시물의 제목 |
 | content | VARCHAR(255) | N |  | 내용 |
+
+## 에러슈팅
