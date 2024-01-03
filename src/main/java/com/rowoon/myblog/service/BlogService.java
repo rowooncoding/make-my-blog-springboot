@@ -23,4 +23,11 @@ public class BlogService {
     public List<Article> findAll() {
         return blogRepository.findAll();
     }
+
+    // 특정 글 하나 조회
+    public Article findById(Long id) {
+        return blogRepository.findById(id)
+                // 해당 글이 없을 때 예외 발생
+                .orElseThrow(() -> new IllegalArgumentException("not found: " + id));
+    }
 }
