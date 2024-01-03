@@ -17,3 +17,6 @@
 | content | VARCHAR(255) | N |  | 내용 |
 
 ## 에러슈팅
+<li>
+  <a href="https://github.com/rowooncoding/make-my-blog-springboot/issues/1">PropertyValueException<a>  
+</li>
