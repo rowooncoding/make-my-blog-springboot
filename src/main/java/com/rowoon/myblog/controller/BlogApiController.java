@@ -3,6 +3,7 @@ package com.rowoon.myblog.controller;
 import com.rowoon.myblog.domain.Article;
 import com.rowoon.myblog.dto.AddArticleRequest;
 import com.rowoon.myblog.dto.ArticleResponse;
+import com.rowoon.myblog.dto.UpdateArticleRequest;
 import com.rowoon.myblog.service.BlogService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -55,4 +56,12 @@ public class BlogApiController {
         return ResponseEntity.ok().build();
     }
 
+    // 글 수정용
+    @PutMapping("/api/articles/{id}")
+    public ResponseEntity<Article> updateArticle(@PathVariable long id, @RequestBody UpdateArticleRequest request) {
+        Article updatedArticle = blogService.update(id, request);
+
+        return ResponseEntity.ok()
+                .body(updatedArticle);
+    }
 }
