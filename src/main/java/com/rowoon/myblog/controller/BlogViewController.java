@@ -2,7 +2,7 @@ package com.rowoon.myblog.controller;
 
 import com.rowoon.myblog.domain.Article;
 import com.rowoon.myblog.dto.ArticleListViewResponse;
-import com.rowoon.myblog.dto.ArticleResponse;
+import com.rowoon.myblog.dto.ArticleViewResponse;
 import com.rowoon.myblog.service.BlogService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
@@ -30,8 +30,7 @@ public class BlogViewController {
     @GetMapping("/articles/{id}")
     public String getArticle(@PathVariable Long id, Model model) {
         Article article = blogService.findById(id);
-        model.addAttribute("article", new ArticleResponse(article));
-
+        model.addAttribute("article", new ArticleViewResponse(article));
         return "article";
     }
 }
