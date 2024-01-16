@@ -1,4 +1,4 @@
-package com.rowoon.myblog.controller;
+package com.rowoon.myblog.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
