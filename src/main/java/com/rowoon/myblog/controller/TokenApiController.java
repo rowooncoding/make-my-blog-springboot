@@ -1,6 +1,5 @@
 package com.rowoon.myblog.controller;
 
-import com.rowoon.myblog.config.jwt.TokenProvider;
 import com.rowoon.myblog.dto.CreateAccessTokenRequest;
 import com.rowoon.myblog.dto.CreateAccessTokenResponse;
 import com.rowoon.myblog.service.TokenService;
