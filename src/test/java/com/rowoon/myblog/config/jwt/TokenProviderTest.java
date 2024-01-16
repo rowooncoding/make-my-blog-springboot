@@ -36,6 +36,7 @@ class TokenProviderTest {
 
         // when
         String token = tokenProvider.generateToken(testUser, Duration.ofDays(14));
+        // String token = tokenProvider.generateToken(testUser, Duration.ofDays(14));
 
         // then
         Long userId = Jwts.parser()
